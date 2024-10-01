@@ -1,9 +1,9 @@
+import math
 import os
 import random
 import sys
-import pygame as pg
 import time
-import math
+import pygame as pg
 
 WIDTH, HEIGHT = 1100, 650
 DELTA = {
@@ -64,7 +64,7 @@ def create_bomb_surfaces_and_accelerations() -> tuple[list[pg.Surface], list[int
         pg.draw.circle(bb_img, (255, 0, 0), (10*r, 10*r), 10*r)  # 爆弾を描画
         bb_imgs.append(bb_img)
 
-    return bb_imgs, bb_accs
+    return bb_imgs, bb_accs #爆弾の大きさと、加速度の速さを返す
 
 def calculate_velocity(kk_rct: pg.Rect, bb_rct: pg.Rect) -> tuple[float, float]:
     """
